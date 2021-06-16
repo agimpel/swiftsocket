@@ -1,0 +1,35 @@
+host: 127.0.0.1
+port: 8001
+
+
+# define the requests, the data and responses fields are optional
+requests:
+
+- command: test1
+  data:
+    id: integer
+    result: string
+  responses:
+  - test1
+  - test2
+
+- command: test2
+  responses:
+  - test2
+
+
+# define the responses, the data and requests fields are optional
+responses:
+
+- command: test1
+  data:
+    id: integer
+    result: string
+  requests:
+  - test1
+  - test2
+
+- command: test2
+  requests:
+  - test1
+  - test2
