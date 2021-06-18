@@ -69,7 +69,6 @@ def read_config(config):
             settings['responses'].append({'command': cmd, 'data': data, 'requests': requests})
     
     # return the completely compiled settings dict
-    print(settings)
     return settings
 
 

@@ -1,0 +1,16 @@
+host: 127.0.0.1
+port: 8001
+
+
+# define the requests, the data and responses fields are optional
+requests:
+
+- command: helloworld
+
+
+# define the responses, the data and requests fields are optional
+responses:
+
+- command: helloworld
+  data:
+    text: string

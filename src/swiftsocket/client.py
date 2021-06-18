@@ -39,4 +39,4 @@ class Client():
         logger.debug(f"Closing the connection to {self.host}:{self.port}.")
         writer.close()
 
-        return data
+        return data.decode()
