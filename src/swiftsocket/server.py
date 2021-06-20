@@ -28,7 +28,8 @@ class Server():
 
         if not self.is_running:
             self.callback = callback
-            self.task = asyncio.create_task(self._main())
+            loop = asyncio.get_event_loop()
+            self.task = loop.create_task(self._main())
             self.is_running = True
         else:
             raise RuntimeError(f"Async socket server was already started.")
